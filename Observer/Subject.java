@@ -22,6 +22,7 @@ public class Subject extends Observable implements Runnable  {
         // replace notifyAllObservers with setChanged() + notifyObservers(state);
         // notifyAllObservers();
         setChanged();
+        // notifyObservers call update() method for each Observer in Observers
         notifyObservers(this.getState());
     }
 
